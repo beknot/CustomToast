@@ -1,18 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Click"
         android:id="@+id/click"
+        android:textAllCaps="false"
         android:layout_centerHorizontal="true"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/text"
+        android:layout_below="@+id/click"
         android:text="Text below button"
         android:textSize="35dp"
-        android:layout_below="@+id/click"
         android:layout_centerHorizontal="true"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/go"
+        android:layout_below="@+id/text"
+        android:text="Go"
+        android:textAllCaps="false"
+        android:layout_centerHorizontal="true"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/go"
+        android:text="Text below button">
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/animation"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"/>
+    </FrameLayout>
 </RelativeLayout>
